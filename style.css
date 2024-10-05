@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+--Strongcyan: hsl(172, 67%, 45%);
+--Verydarkcyan: hsl(183, 100%, 15%);
+--Darkgrayishcyan: hsl(186, 14%, 43%);
+--Grayishcyan: hsl(184, 14%, 56%);
+--Lightgrayishcyan: hsl(185, 41%, 84%);
+--Verylightgrayishcyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+body{
+    font-family: "Space Mono", monospace;
+    background-color: var(--Lightgrayishcyan);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+main .container{
+    margin: 100px auto;
+}
+main .container .logo{
+    margin: 100px 0 50px 350px;
+    width: 70px;
+}
+main .container .tip_calculator{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 800px;
+    height: 450px;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding-right: 30px;
+}
+main .container .tip_calculator .information{
+    width: 55%;
+    height: 100%;
+}
+main .container .tip_calculator .information .bil{
+    display: inline-block;
+    font-family: "Space Mono";
+    font-weight: 700;
+   color:var(--Darkgrayishcyan) ;
+   margin: 50px 50px 5px;
+}
+main .container .tip_calculator .information div{
+    position: relative;
+}
+main .container .tip_calculator .information div img{
+    position: absolute;
+    top: 10px;
+    left:60px;
+    display: block;
+}
+main .container .tip_calculator .information div #Bill{
+    display: block;
+    border: none;
+    outline: none;
+    text-align: right;
+    padding: 10px 15px;
+    background-color: var(--Lightgrayishcyan);
+    border-radius:5px;
+    width: 80%;
+    margin: 0px 50px 5px;
+    color: var(--Verydarkcyan);
+    font-size: 20px;
+    font-weight: 700;
+}
+main .container .tip_calculator .information .tip{
+    display: inline-block;
+    font-family: "Space Mono";
+    font-weight: 700;
+   color:var(--Darkgrayishcyan) ;
+   margin: 10px 50px 5px;
+}
+main .container .tip_calculator .information .select_tipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+main .container .tip_calculator .information .select_tipe button{
+    padding: 8px 30px;
+    background-color:var(--Verydarkcyan);
+    color: var(--White);
+    font-weight: 600;
+    font-size: 20px;
+    font-family:"Space Mono";
+    border-radius: 10px;
+    transition: all 0.6s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+main .container .tip_calculator .information .select_tipe input{
+    padding: 8px 10px;
+    width: 95px;
+    background-color:var(--Lightgrayishcyan);
+    color: var(--Darkgrayishcyan);
+    font-weight: 600;
+    font-size: 20px;
+    font-family:"Space Mono";
+    border-radius: 10px;
+    transition: all 0.5s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: right;
+}
+main .container .tip_calculator .information .select_tipe input:focus{
+    border: 3px solid var(--Strongcyan);
+}
+
+main .container .tip_calculator .information .select_tipe button:hover{
+    background-color:var(--Lightgrayishcyan);
+    color: var(--Darkgrayishcyan);
+}
+main .container .tip_calculator .information .select_tipe button:focus{
+    background-color:var(--Strongcyan);
+    color: var(--Darkgrayishcyan);
+}
+main .container .tip_calculator .information .num{
+    display: inline-block;
+    font-family: "Space Mono";
+    font-weight: 600;
+    font-size: 15px;
+   color:var(--Darkgrayishcyan) ;
+   margin: 30px 50px 5px;
+}
+main .container .tip_calculator .information #error{
+    display: inline-block;
+    font-family: "Space Mono";
+    font-weight: 700;
+    font-size: 15px;
+    margin-right:5px;
+   color:rgba(255, 0, 0, 0.548) ;
+}
+main .container .tip_calculator .information .num-people{
+    position: relative;
+}
+main .container .tip_calculator .information .num-people img{
+    position: absolute;
+    top: 25px;
+    left:70px;
+}
+main .container .tip_calculator .information .num-people #number_people{
+    padding: 8px 10px;
+    background-color:var(--Lightgrayishcyan);
+    color: var(--Darkgrayishcyan);
+    font-weight: 600;
+    font-size: 20px;
+    font-family:"Space Mono";
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: right;
+    margin: 10px 50px 5px;
+    width: 80%;
+    color: var(--Darkgrayishcyan);
+}
+main .container .tip_calculator .result{
+    width: 45%;
+    height: 80%;
+    background-color: var(--Verydarkcyan);
+    border-radius: 10px;
+    color: var(--White);
+    margin-top: 50px;
+}
+
+main .container .tip_calculator .result .amont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+main .container .tip_calculator .result .amont #result{
+    float: left;
+    color: var(--Lightgrayishcyan);
+    font-size: 30px;
+    font-weight: 700;
+    font-family:"Space Mono";
+    margin: 15px 20px 0 0;
+}
+
+main .container .tip_calculator .result .amont div .am{
+    display: inline-block;
+    margin: 30px 30px 0;
+}
+main .container .tip_calculator .result .amont div .person{
+    display: block;
+    opacity: 0.6;
+    margin-left: 30px;
+}
+main .container .tip_calculator .result .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+main .container .tip_calculator .result .total div .tot{
+    display: inline-block;
+    margin: 30px 30px 0;
+}
+main .container .tip_calculator .result .total div .person_1{
+    display: block;
+    opacity: 0.6;
+    margin-left: 30px;
+}
+main .container .tip_calculator .result .total #result_1{
+    float: left;
+    color: var(--Lightgrayishcyan);
+    font-size: 30px;
+    font-weight: 700;
+    font-family:"Space Mono";
+    margin: 15px 20px 0 0;
+}
+main .container .tip_calculator .result button{
+    padding: 6px 10px;
+    background-color:var(--Darkgrayishcyan);
+    color: var(--Grayishcyan);
+    font-weight: 600;
+    font-size: 20px;
+    font-family:"Space Mono";
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 150px 20px 5px;
+    transition: all 0.6s;
+    width: 90%; 
+}
+main .container .tip_calculator .result button:focus{
+   background-color: var(--Strongcyan);
+   color:var(--Verydarkcyan) ;
+}
+@media(max-width:768px){
+    main .container .tip_calculator {
+        width: 710px;
+      }
+      main .container .tip_calculator .information .select_tipe button {
+        padding: 8px 20px;
+      }
+      main .container .tip_calculator .information .num {
+        margin: 30px 34px 5px;
+      }
+      main .container .tip_calculator .information .select_tipe input {
+        width: 78px;
+        font-size: 16px;
+      }
+      main .container .tip_calculator .information .num-people #number_people {
+        margin: 10px 30px 5px;
+        width: 84%;
+      }
+      main .container .tip_calculator .information .num-people img {
+        left: 46px;
+      }
+}
+@media(max-width:480px){
+    main .container .logo {
+        margin: 381px 0 35px 191px;
+        width: 70px;
+      }
+    main .container .tip_calculator {
+        width: 450px;
+        flex-direction: column;
+        height: 800px;
+      }
+      main .container .tip_calculator .information div #Bill {
+        width: 380px;
+      }
+      main .container .tip_calculator .information .select_tipe {
+        gap: 10px;
+        width: 460px;
+        margin-left:0;
+      }
+      main .container .tip_calculator .information .select_tipe button {
+        padding: 8px 40px;
+      }
+      main .container .tip_calculator .information .select_tipe input {
+        width: 113px;
+        font-size: 16px;
+        text-align: center;
+      }
+      main .container .tip_calculator .information #error {
+        position: absolute;
+        top: 530px;
+        left: 284px;
+      }
+      main .container .tip_calculator .information .num-people #number_people {
+        width: 395px;
+      }
+      main .container .tip_calculator .result {
+        width: 415px;
+        margin-left: 26px;
+        margin-bottom:20px;
+      }
+      main .container .tip_calculator .result button {
+        margin: 100px 20px 5px;
+      }
+}
+@media(max-width:375px){
+    main .container .logo {
+        margin: 230px 0 35px 145px;
+      }
+      main .container .tip_calculator {
+        width: 360px;
+      }
+      main .container .tip_calculator .information div #Bill {
+        width: 300px;
+      }
+      main .container .tip_calculator .information .tip {
+        display: block ruby;
+      }
+      main .container .tip_calculator .information .select_tipe {
+        width: 360px;
+        margin-left: 15px;
+      }
+      main .container .tip_calculator .information .select_tipe button {
+        padding: 8px 55px;
+      }
+      main .container .tip_calculator .information .select_tipe input {
+        width: 140px;
+      }
+      main .container .tip_calculator .information .num {
+        font-size: 11px;
+      }
+      main .container .tip_calculator .information .num-people #number_people {
+        width: 313px;
+      }
+      main .container .tip_calculator .information #error {
+        position: absolute;
+        top: 502px;
+        left: 219px;
+        font-size: 13px;
+      }
+      main .container .tip_calculator .result {
+        width: 322px;
+      }
+      main .container .tip_calculator .result button {
+        margin-bottom:15px;
+      }
+}
+@media(max-width:320px){
+    main .container .tip_calculator {
+        width: 300px;
+      }
+      main .container .tip_calculator .information div #Bill {
+        width: 235px;
+      }
+      main .container .tip_calculator .information .select_tipe {
+        width: 300px;
+      }
+      main .container .tip_calculator .information .select_tipe button {
+        padding: 8px 40px;
+      }
+      main .container .tip_calculator .information .select_tipe input {
+        width: 115px;
+      }
+      main .container .tip_calculator .information .num-people #number_people {
+        width: 258px;
+      }
+      main .container .tip_calculator .result {
+        width: 265px;
+      }
+      main .container .tip_calculator .result .amont #result {
+        font-size: 22px;
+      }
+      main .container .tip_calculator .result .total #result_1 {
+        font-size: 22px;
+      }
+      main .container .tip_calculator {
+        height: 830px;
+      }
+      main .container .tip_calculator .information #error {
+        top: 487px;
+      }
+}

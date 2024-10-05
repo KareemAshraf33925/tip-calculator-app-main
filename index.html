@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip-calculator-app-main</title>
+    <!-- link-css -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <img src="images/logo.svg" alt="logo" class="logo">
+            <div class="tip_calculator">
+                <div class="information">
+                    <label class="bil" for="Bill">Bill</label>
+                    <div>
+                    <img src="images/icon-dollar.svg" alt="icon-dollar">
+                    <input type="text" id="Bill" placeholder="0">
+                    </div>
+                    <label class="tip">select tip%</label>
+                    <div class="select_tipe">
+                        <button onclick="tip(0.05)">5%</button>
+                        <button onclick="tip(0.1)">10%</button>
+                        <button onclick="tip(0.15)">15%</button>
+                        <button onclick="tip(0.25)">25%</button>
+                        <button onclick="tip(0.5)">50%</button>
+                        <input type="text" placeholder="custom" id="custom"
+                        ondblclick="cust()">
+                    </div>
+                    <label for="number_people" class="num">Number of pepole</label>
+                    <span id="error"> </span>
+                    <div class="num-people">
+                    <img src="images/icon-person.svg" alt="icon-person">
+                    <input type="text" id="number_people" placeholder="0">
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="amont">
+                        <div>
+                        <span class="am">Tip Amount</span>
+                        <span class="person">/ Person</span>
+                        </div>
+                        <p id="result">$ 0.00</p>
+                    </div>
+                    <div class="total">
+                        <div>
+                        <span class="tot">Total</span>
+                        <span class="person_1">/ Person</span>
+                        </div>
+                        <p id="result_1">$ 0.00</p>
+                    </div>
+                    <button id="reset">RESET</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- link-javascript -->
+     <script src="java.js"></script>
+</body>
+</html>
